@@ -1484,3 +1484,320 @@ footer {
     flex-direction: column;
   }
 }
+
+/* Mobile readiness polish */
+html,
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 760px) {
+  body {
+    background:
+      radial-gradient(circle at 30% 0%, rgba(41, 216, 199, 0.18), transparent 34%),
+      linear-gradient(180deg, #080b12 0%, #07090f 56%, #0b1115 100%);
+  }
+
+  header {
+    position: sticky;
+    padding: 14px 16px 12px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  nav {
+    width: 100%;
+    gap: 6px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav a {
+    flex: 0 0 auto;
+    padding: 8px 11px;
+    font-size: 0.86rem;
+  }
+
+  main {
+    width: 100%;
+    padding: 14px 12px 0;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 38px 18px 34px;
+    border-radius: 14px;
+  }
+
+  .hero-kicker {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+
+  .availability {
+    max-width: 100%;
+    padding: 7px 10px;
+    font-size: 0.78rem;
+  }
+
+  .hero h1 {
+    max-width: none;
+    font-size: 3.25rem;
+    line-height: 0.98;
+    margin-bottom: 14px;
+  }
+
+  .hero h2 {
+    max-width: none;
+    font-size: 1.55rem;
+    line-height: 1.14;
+    margin-bottom: 18px;
+  }
+
+  .hero p {
+    max-width: none;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 18px;
+  }
+
+  .hero-highlights {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .hero-highlights div {
+    min-width: 0;
+    padding: 14px 16px;
+  }
+
+  .hero-highlights strong {
+    font-size: 1.55rem;
+  }
+
+  .hero-badges {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .hero-badges span {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 9px 12px;
+    font-size: 0.88rem;
+  }
+
+  .hero-image-wrap {
+    width: min(100%, 420px);
+    margin: 0 auto;
+    justify-self: center;
+    filter: drop-shadow(0 24px 34px rgba(0, 0, 0, 0.34));
+  }
+
+  .experience-strip {
+    margin-top: 14px;
+    padding: 28px 0;
+  }
+
+  .experience-strip::before,
+  .experience-strip::after {
+    width: 42px;
+  }
+
+  .experience-heading {
+    margin-bottom: 18px;
+    padding-inline: 16px;
+  }
+
+  .experience-heading h2,
+  .section h2,
+  .cta-card h2 {
+    font-size: 1.75rem;
+    line-height: 1.12;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+  }
+
+  .marquee-track {
+    gap: 10px;
+    animation-duration: 20s;
+  }
+
+  .marquee-track span {
+    min-height: 54px;
+    padding: 0 16px;
+    font-size: 0.98rem;
+  }
+
+  .section {
+    padding: 54px 12px;
+  }
+
+  .section-intro {
+    margin-bottom: 24px;
+  }
+
+  .services .service-grid,
+  .reasons .reason-grid,
+  .showcase-grid,
+  .testimonial-grid,
+  .banner-stats,
+  .skills-grid,
+  .counters {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-card,
+  .reason-card,
+  .counter-card,
+  .contact-form,
+  .showcase-card,
+  .testimonial-card,
+  .banner-card,
+  .stat-card,
+  .skill-category {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .banner {
+    display: grid;
+    gap: 14px;
+  }
+
+  .counters {
+    margin-top: 0;
+    padding: 14px;
+  }
+
+  .reasons-intro {
+    gap: 20px;
+  }
+
+  .reason-image-wrap img {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .cta-banner {
+    padding: 0 12px 54px;
+  }
+
+  .cta-card {
+    padding: 22px;
+  }
+
+  .contact {
+    gap: 22px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  input,
+  textarea {
+    padding: 14px 15px;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    margin-top: 24px;
+    padding: 42px 18px 28px;
+  }
+
+  .footer-content {
+    gap: 22px;
+    text-align: left;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    padding: 34px 14px 30px;
+  }
+
+  .hero h1 {
+    font-size: 2.85rem;
+  }
+
+  .hero h2 {
+    font-size: 1.35rem;
+  }
+
+  .hero-image-wrap {
+    width: min(100%, 360px);
+  }
+
+  .experience-heading h2,
+  .section h2,
+  .cta-card h2 {
+    font-size: 1.55rem;
+  }
+
+  .service-card,
+  .reason-card,
+  .counter-card,
+  .contact-form,
+  .showcase-card,
+  .testimonial-card,
+  .banner-card,
+  .stat-card,
+  .skill-category,
+  .cta-card {
+    padding: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
